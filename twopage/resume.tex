@@ -1,0 +1,96 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+% \usepackage{enumitem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[12pt, a4paper]{awesome-cv}
+\geometry{left=2cm, top=1.5cm, right=2cm, bottom=1.9cm, footskip=.5cm} % Configure page margins with geometry
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-concrete}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+% \headersocialsep[\quad\textbar\quad]
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+% \usepackage{microtype}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+\name{Sahil}{Bansal}
+\address{Indian Institute of Technology Kanpur}
+\mobile{(+91) 73880-64061} 
+%%% Social
+\email{bsahil@iitk.ac.in}
+%\email{sahilbansalkkr@gmail.com}
+% \homepage{cse.iitk.ac.in/users/bsahil/}
+\github{bsahil29}
+\linkedin{sahilbansal-29}
+%%% Optionals
+\position{Final Year Undergraduate{\enskip\cdotp\enskip}Computer Science And Engineering}
+%Double Major, Computer Science and Engineering}
+%\position{Double Major, Dept. of Computer Science and Engineering}
+%\quote{`Double Major, Dept. of Computer Science and Engineering"}
+
+\makecvfooter{\today}{Sahil Bansal~~~·~~~Résumé}{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+   %\makecvfooter
+   %{}
+   %{\thepage}
+   %{}
+
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
+
+%%% Import contents
+% \input{resume/education.tex}
+\import{\sectiondir}{education.tex}
+\import{\sectiondir}{honors.tex}
+\import{\sectiondir}{internships.tex}
+% \pagebreak
+\import{\sectiondir}{extracurricular.tex}
+\import{\sectiondir}{experience.tex}
+
+\import{\sectiondir}{presentation.tex}
+\import{\sectiondir}{writing.tex}
+\import{\sectiondir}{committees.tex}
+\end{document}
